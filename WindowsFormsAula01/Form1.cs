@@ -19,9 +19,18 @@ namespace WindowsFormsAula01
 
         private void btnMensagem_Click(object sender, EventArgs e)
         {
-            string mensagem = txtMensagem.Text;
+            
 
-            MessageBox.Show("Mensagem: " + mensagem,"Mensagem Saudação",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (!txtMensagem.Text.Equals(""))
+            {
+                MessageBox.Show("Mensagem: " + txtMensagem.Text, "Mensagem Saudação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Preencha o campo!");
+            }
+            
+            
         }
     }
 }
