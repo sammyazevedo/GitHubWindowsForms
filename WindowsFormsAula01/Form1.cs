@@ -16,5 +16,12 @@ namespace WindowsFormsAula01
         {
             InitializeComponent();
         }
+
+        private void btnMensagem_Click(object sender, EventArgs e)
+        {
+            string mensagem = txtMensagem.Text;
+
+            MessageBox.Show("Mensagem: " + mensagem,"Mensagem Saudação",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+        }
     }
 }
