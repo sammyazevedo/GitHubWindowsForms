@@ -25,8 +25,12 @@ namespace WindowsFormsAula01
             //if (!txtMensagem.Text.Equals(""))
             {
                 result = Convert.ToInt32(txtMensagem.Text) + Convert.ToInt32(txtNum1.Text);
-                MessageBox.Show("Resultado: " + result.ToString(), "Mensagem Saudação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBox.Show("Resultado: " + result.ToString(), "Calcular soma de inteiros", 
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                lblResultado.Text = result.ToString();
             }
+
             else
             {
                 MessageBox.Show("Preencha o campo!");
