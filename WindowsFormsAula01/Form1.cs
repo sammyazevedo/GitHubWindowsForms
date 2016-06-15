@@ -19,11 +19,13 @@ namespace WindowsFormsAula01
 
         private void btnMensagem_Click(object sender, EventArgs e)
         {
-            
-
-            if (!txtMensagem.Text.Equals(""))
+            int result = 0; 
+               
+            if(!string.IsNullOrEmpty(txtMensagem.Text) && !string.IsNullOrEmpty(txtNum1.Text))
+            //if (!txtMensagem.Text.Equals(""))
             {
-                MessageBox.Show("Mensagem: " + txtMensagem.Text, "Mensagem Saudação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                result = Convert.ToInt32(txtMensagem.Text) + Convert.ToInt32(txtNum1.Text);
+                MessageBox.Show("Resultado: " + result.ToString(), "Mensagem Saudação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             }
             else
             {
